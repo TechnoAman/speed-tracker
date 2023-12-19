@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/speed-tracker/static/css/main.39a41eb5.css",
+    "main.js": "/speed-tracker/static/js/main.f5a8f65c.js",
+    "index.html": "/speed-tracker/index.html",
+    "main.39a41eb5.css.map": "/speed-tracker/static/css/main.39a41eb5.css.map",
+    "main.f5a8f65c.js.map": "/speed-tracker/static/js/main.f5a8f65c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.39a41eb5.css",
+    "static/js/main.f5a8f65c.js"
+  ]
+}
