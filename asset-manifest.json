@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/speed-tracker/static/css/main.39a41eb5.css",
-    "main.js": "/speed-tracker/static/js/main.f5a8f65c.js",
+    "main.css": "/speed-tracker/static/css/main.ae85b856.css",
+    "main.js": "/speed-tracker/static/js/main.3b8fe51b.js",
     "index.html": "/speed-tracker/index.html",
-    "main.39a41eb5.css.map": "/speed-tracker/static/css/main.39a41eb5.css.map",
-    "main.f5a8f65c.js.map": "/speed-tracker/static/js/main.f5a8f65c.js.map"
+    "main.ae85b856.css.map": "/speed-tracker/static/css/main.ae85b856.css.map",
+    "main.3b8fe51b.js.map": "/speed-tracker/static/js/main.3b8fe51b.js.map"
   },
   "entrypoints": [
-    "static/css/main.39a41eb5.css",
-    "static/js/main.f5a8f65c.js"
+    "static/css/main.ae85b856.css",
+    "static/js/main.3b8fe51b.js"
   ]
 }
