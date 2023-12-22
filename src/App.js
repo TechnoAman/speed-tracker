@@ -232,42 +232,52 @@ class App extends Component {
         <section className="video-section">
           <h3> Speed Tracker </h3>
           <div className="player-wrapper">
-            <ReactPlayer
-              ref={this.ref}
-              className="react-player"
-              width="100%"
-              height="100%"
-              url={url}
-              pip={pip}
-              playing={playing}
-              controls={controls}
-              light={light}
-              loop={loop}
-              playbackRate={playbackRate}
-              volume={volume}
-              muted={muted}
-              onReady={() => console.log("onReady")}
-              onStart={() => console.log("onStart")}
-              onPlay={this.handlePlay}
-              onEnablePIP={this.handleEnablePIP}
-              onDisablePIP={this.handleDisablePIP}
-              onPause={this.handlePause}
-              onBuffer={() => console.log("onBuffer")}
-              onPlaybackRateChange={this.handleOnPlaybackRateChange}
-              onSeek={(e) => console.log("onSeek", e)}
-              onEnded={this.handleEnded}
-              onError={(e) => console.log("onError", e)}
-              onProgress={this.handleProgress}
-              onDuration={this.handleDuration}
-              onPlaybackQualityChange={(e) =>
-                console.log("onPlaybackQualityChange", e)
-              }
-            />
+            {url && (
+              <ReactPlayer
+                ref={this.ref}
+                className="react-player"
+                width="100%"
+                height="100%"
+                url={url}
+                pip={pip}
+                playing={playing}
+                controls={controls}
+                light={light}
+                loop={loop}
+                playbackRate={playbackRate}
+                volume={volume}
+                muted={muted}
+                onReady={() => console.log("onReady")}
+                onStart={() => console.log("onStart")}
+                onPlay={this.handlePlay}
+                onEnablePIP={this.handleEnablePIP}
+                onDisablePIP={this.handleDisablePIP}
+                onPause={this.handlePause}
+                onBuffer={() => console.log("onBuffer")}
+                onPlaybackRateChange={this.handleOnPlaybackRateChange}
+                onSeek={(e) => console.log("onSeek", e)}
+                onEnded={this.handleEnded}
+                onError={(e) => console.log("onError", e)}
+                onProgress={this.handleProgress}
+                onDuration={this.handleDuration}
+                onPlaybackQualityChange={(e) =>
+                  console.log("onPlaybackQualityChange", e)
+                }
+              />
+            )}
+
+            {url == null && (
+              <div> {"Select your video \n Then load the file"} </div>
+            )}
           </div>
 
           <div className="controls">
-            <button className="backward" onClick={this.skipBackward}>Backward 25ms</button>
-            <button className="forward" onClick={this.skipForward}>Forward 25ms</button>
+            <button className="backward" onClick={this.skipBackward}>
+              Backward 25ms
+            </button>
+            <button className="forward" onClick={this.skipForward}>
+              Forward 25ms
+            </button>
           </div>
 
           <div className="file-input">
@@ -296,7 +306,7 @@ class App extends Component {
           </div>
         </section>
         <div className="calculation-section">
-        <Gauge speed={calculatedSpeed||0} />
+          <Gauge speed={calculatedSpeed || 0} />
           <div className="speed-calculator">
             {calculatedSpeed == null && (
               <div>
@@ -341,7 +351,6 @@ class App extends Component {
               Calculate Bowling Speed
             </button>
           )}
-         
         </div>
       </div>
     );
